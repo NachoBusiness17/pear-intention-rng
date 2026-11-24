@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pear-intention-rng"
+version = "1.0.0"
+description = "PEAR-style tripolar intention RNG experiment with per-byte provenance and Dead-Salmon control"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn>=0.30.0",
+]
+
+[project.scripts]
+pear-rng = "app:main"
+
+[tool.setuptools]
+py-modules = ["app"]
